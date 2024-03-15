@@ -286,7 +286,8 @@ public class RequestServlet extends HttpServlet
 		//	New SelfService Request
 		if (R_Request_ID == 0)
 		{
-			req = new MRequest(ctx, SalesRep_ID, R_RequestType_ID, Summary, true, null);
+			//TODO
+			req = MRequest.createRequest(ctx, SalesRep_ID, R_RequestType_ID, Summary, true, null);
 			req.setC_BPartner_ID(wu.getC_BPartner_ID());
 			req.setAD_User_ID(wu.getAD_User_ID());
 			if (C_Order_ID > 0)
